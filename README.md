@@ -8,7 +8,7 @@ The design is modular, synthesizable, and suitable for simulation or FPGA demons
 
 ## Features
 - 8-bit data path
-- 16 bit instruction format(opcode + imm/addr
+- 16 bit instruction format(opcode + imm/addr)
 - FSM based Control Unit
 - ROM based program memory
 - Synthesizable Verilog HDL
@@ -24,6 +24,18 @@ The CPU is Accumulator-based and consists of following main blocks:
 - Zero Flag(Z): set when ALU result is 0
 - Output Register(OUT): drives external outputs
 - Control Unit(FSM): controls fetch, decode, execute
+
+## Instruction Set Table
+OpCode   |   Operation
+0000     |  No operation
+0001     |  LOAD
+0010     |  ADD
+0011     |  SUB
+0100     |  AND
+0101     |  OR
+0110     |  JMP
+0111     |  JZ
+1000     |  OUT
 
 
 ## Learning Outcomes
